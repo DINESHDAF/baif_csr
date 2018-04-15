@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').create();
 var extend = require('deep-extend');
 var fs = require('fs');
 var gulp = require('gulp');
@@ -93,3 +94,10 @@ gulp.task('watch-sass', function() {
 gulp.task('build', ['compile-js', 'compile-sass']);
 gulp.task('grow-build', ['compile-js', 'compile-sass']);
 gulp.task('default', ['watch-js', 'watch-sass']);
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        port: "3000",
+        proxy: "http://localhost:8080"
+    });
+});
