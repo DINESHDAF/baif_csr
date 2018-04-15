@@ -1,6 +1,6 @@
 grow_version: ">=0.2.5"
 
-title: "Site Title"
+title: "BAIF CSR Project"
 
 home: /content/pages/home.yaml
 
@@ -19,6 +19,7 @@ meta:
 preprocessors:
 - kind: gulp
   build_task: grow-build
+  run_task: browser-sync
 
 static_dirs:
 - static_dir: /static/

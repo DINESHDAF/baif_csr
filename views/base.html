@@ -23,6 +23,8 @@
     <link rel="shortcut icon" href="{{g.static(podspec.meta.favicon_path).url.path}}">
     {% endif %}
 
+    <!-- Angular Material CSS now available via Google CDN; version 1.1.6 used here -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css">
     <link href="{{ g.static('/dist/css/composite/global.min.css').url.path }}" rel="stylesheet">
     {% set compositeCssFiles = [doc.view|replace('.html', '')] %}
     {% set compositeCssFiles = compositeCssFiles + (doc.composite_files if doc.composite_files else []) %}
@@ -59,6 +61,14 @@
     </div>
     {% include "/partials/footer/footer.html" %}
 
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 1.1.6 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.js"></script>
     <script src="{{ g.static('/dist/js/composite/global.min.js').url.path }}"></script>
     {% set compositeJsFiles = [doc.view|replace('.html', '')] %}
     {% set compositeJsFiles = compositeJsFiles + (doc.composite_files if doc.composite_files else []) %}

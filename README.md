@@ -26,12 +26,6 @@ grow install
 grow run
 ```
 
-Simultaneously you can run Browser-sync to view the site in multiple devices.
-
-```
-gulp browser-sync
-```
-
 ## Building
 
 You can use the `grow build` command to build your whole site to the `build` directory. This is a good way to test and verify the generated code.
